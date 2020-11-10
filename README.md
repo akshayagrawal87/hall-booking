@@ -4,7 +4,7 @@
 
 ### 0./
 
-[get room Endpoint](https://hall-booking-apis.herokuapp.com/)
+[get landingPage Endpoint](https://hall-booking-apis.herokuapp.com/)
 
 ### 1. /room
 
