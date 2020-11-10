@@ -27,3 +27,7 @@
 ### 5. /customerd
 
 [post bookRoom Endpoint](https://hall-booking-apis.herokuapp.com/customers)
+
+### Postman Documentation
+
+[Postman Documentation](https://documenter.getpostman.com/view/6770852/TVem9oW7)
