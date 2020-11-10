@@ -2,6 +2,10 @@
 
 ## ALL API
 
+### 0./
+
+[get room Endpoint](https://hall-booking-apis.herokuapp.com/)
+
 ### 1. /room
 
 [get room Endpoint](https://hall-booking-apis.herokuapp.com/room)
