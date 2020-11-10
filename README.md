@@ -1,12 +1,6 @@
 # Hall-Booking Api
 
-## Heroku Link
-
 ## ALL API
-
-### Heroku Endpoint
-
-[Heroku Endpoint](https://hall-booking-apis.herokuapp.com/)
 
 ### 1. /room
 
@@ -24,10 +18,14 @@
 
 [post bookRoom Endpoint](https://hall-booking-apis.herokuapp.com/bookRoom)
 
-### 5. /customerd
+### 5. /customers
 
 [post bookRoom Endpoint](https://hall-booking-apis.herokuapp.com/customers)
 
-### Postman Documentation
+## Postman Documentation
 
 [Postman Documentation](https://documenter.getpostman.com/view/6770852/TVem9oW7)
+
+## Heroku Endpoint
+
+[Heroku Endpoint](https://hall-booking-apis.herokuapp.com/)
