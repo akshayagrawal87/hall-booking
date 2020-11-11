@@ -85,8 +85,12 @@ try {
 		.post("/bookRoom", (req, res) => {
 			//Api to book a room(Given that no rooms are booked on that date and time).
 
-			let flag = 1;
+			let flag;
+
+			let result = [];
+
 			req.body.bookingDetails.forEach((room) => {
+				flag = 1;
 				let roomData = bookingData.find((rooms) => {
 					if (rooms.roomId === room.roomId) {
 						console.log("room id's equal");
@@ -110,7 +114,11 @@ try {
 									bookedStartTime >= bookingTime) ||
 								bookingTime === bookedStartTime
 							) {
-								console.log("A booking Already Exists on given time");
+								result.push({
+									roomId: room.roomId,
+									status: "A booking Already Exists on given time",
+								});
+
 								flag = 0;
 							}
 						}
@@ -119,18 +127,16 @@ try {
 				if (flag === 1) {
 					room["status"] = "confirm";
 					bookingData.push(room);
+					result.push({
+						roomId: room.roomId,
+						status: "Booking Confirmed",
+					});
 				}
 			});
 
-			if (flag === 1) {
-				res.status(200).json({
-					bookingStatus: "success",
-				});
-			} else {
-				res.status(200).json({
-					bookingStatus: "Booking Already Exists",
-				});
-			}
+			res.status(200).json({
+				bookingStatus: result,
+			});
 		})
 		.get("/customers", (req, res) => {
 			//Api to show list of all customer with a booking
